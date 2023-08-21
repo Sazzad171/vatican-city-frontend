@@ -1,14 +1,13 @@
 /* 
-    Website name: Suvastu
+    Website name: 
     Author: Sazzad
 */
 
 /* ============ Header start ============= */
 header {
-    background: rgb(255 255 255 / 25%);
+    background: rgb(255 255 255 / 55%);
 }
 header.scrolled {
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
     background-color: #fff;
 }
 header .navbar {
@@ -22,7 +21,7 @@ header .nav-item {
 }
 header .nav-link {
     position: relative;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.9);
     font-weight: 600;
     padding: 0 !important;
 }
@@ -64,285 +63,136 @@ header .dropdown-menu .dropdown-item {
 header .dropdown:hover .dropdown-menu {
     display: block;
 }
+header .btn {
+    line-height: 32px;
+}
 /* ============ Header end ============= */
 
-/* ============ banner start ============= */
-.banner-area {
-    padding: 260px 0 190px;
+/* ============ home page start ============= */
+.banner-search-area {
+    padding: 116px 0 60px;
 }
-.banner-area .content-area p {
-    font-weight: 400;
-    color: #e1e1e1;
+.banner-search-area .wrapper {
+    background: url('../images/home/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 14px;
 }
-/* wave play button */
-.video-play-button {
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    box-sizing: content-box;
-    display: block;
-    width: 24px;
-    height: 28px;
-    /* background: #fa183d; */
-    border-radius: 50%;
-    padding: 10px 14px 12px 18px;
-  }
-  
-  .video-play-button:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 80px;
-    height: 80px;
-    background: #0069B8;
-    border-radius: 50%;
-    animation: pulse-border 1500ms ease-out infinite;
-  }
-  
-  .video-play-button:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 80px;
-    height: 80px;
-    background: #0069B8;
-    border-radius: 50%;
-    transition: all 200ms;
-  }
-  
-  .video-play-button:hover:after {
-    background-color: darken(#0069B8, 10%);
-  }
-  
-  .video-play-button img {
-    position: relative;
-    z-index: 3;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
-  
-  .video-play-button span {
-    display: block;
-    position: relative;
-    z-index: 3;
-    width: 0;
-    height: 0;
-    border-left: 26px solid #fff;
-    border-top: 16px solid transparent;
-    border-bottom: 16px solid transparent;
-  }
-  
-  @keyframes pulse-border {
-    0% {
-      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-      opacity: 0;
-    }
-  }
-/* ============ banner end ============= */
-
-/* ============ features start ============= */
-.features-area .section-heading .wrapper::before {
+.banner-search-area .overlay {
+    background: #303030a6;
+    border-radius: 14px;
+}
+.banner-search-area .search-box input {
+    border-radius: 28px;
+    padding: 14px 40px;
+    font-weight: 600;
+}
+.banner-search-area .search-box i {
+    font-size: 18px;
+    left: 16px;
+    top: 18px;
+}
+.banner-search-area .search-box .btn {
+    right: 4px;
+    top: 4px;
+    border-radius: 28px;
+    padding: 2px 20px;
+}
+.banner-search-area .calender-box input {
+    border-radius: 28px;
+    padding: 14px 18px;
+    font-weight: 600;
+}
+.sec-heading h3::after {
     content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 30%;
-    right: 30%;
+    width: 40px;
     height: 4px;
-    background-color: #0069B8;
-    border-radius: 10px;
-}
-.features-area .feature-box {
-    padding: 60px 50px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.features-area .feature-box:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.features-area .feature-box img {
-    max-width: 60px;
-}
-/* ============ features end ============= */
-
-/* ============ why suvastu start ============= */
-.why-us-area {
-    background-color: #F5FAFF;
-}
-/* ============ why suvastu end ============= */
-
-/* ============ testimonial start ============= */
-.testimonial-area .section-heading .wrapper::before {
-    content: '';
     position: absolute;
-    bottom: -12px;
-    left: 30%;
-    right: 30%;
-    height: 4px;
-    background-color: #0069B8;
-    border-radius: 10px;
-}
-.testimonial-single .img-area {
-    min-width: 15%;
-}
-/* triangle */
-.testimonial-single .triangle-bottom{
-    top: 100%;
-    left: 45%;
-    width: 0;
-    height: 0;
-    border-left: 34px solid transparent;
-    border-right: 34px solid transparent;
-    border-top: 30px solid #F7FAFD;
-}
-
-.testimonial-single .item {
-    background-color: #F7FAFD;
-    padding: 20px 20px;
-}
-.testimonial-single .item img {
-    width: 100px;
-    height: 100px;
-    padding: 4px;
-    border: 2px solid #0069B8;
-    object-fit: cover;
-}
-.testimonial-hash-items .item img {
-    width: 80px;
-    height: 80px;
-    padding: 4px;
-    border: 2px solid #0069B8;
-    object-fit: cover;
-    margin: 0 auto;
-}
-/* ============ testimonial end ============= */
-
-/* ============ count users start ============= */
-.count-users-area {
-    background-color: #F5FAFF;
-}
-/* ============ count users end ============= */
-
-/* ============ count users start ============= */
-.featured-on-area .section-heading .wrapper::before {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 30%;
-    right: 30%;
-    height: 4px;
-    background-color: #0069B8;
-    border-radius: 10px;
-}
-.featured-slider .owl-stage {
-    display: flex;
-    align-items: center;
-}
-.featured-slider img {
-    max-width: 190px !important;
-}
-/* ============ count users end ============= */
-
-/* ============ about us page start ============= */
-.page-banner-area {
-    padding: 170px 0 80px;
-}
-.mission-box img {
-    width: 60px;
-}
-.vision-box img {
-    width: 80px;
-}
-
-.team-area {
-    background-color: #F5FAFF;
-}
-.team-area .section-heading .wrapper::before {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 30%;
-    right: 30%;
-    height: 4px;
-    background-color: #0069B8;
-    border-radius: 10px;
-}
-.team-members-slider .team-item {
-    padding-bottom: 80px;   
-}
-.team-members-slider .team-item img {
-    height: 300px;
-    object-fit: cover;
-}
-.team-members-slider .team-item .bio-box {
-    bottom: 0;
     left: 0;
-    right: 0;
-    padding: 16px 10px 10px;
+    bottom: -20px;
+    background-color: #0061DF;
 }
-.team-members-slider .team-item .social-icons {
-    max-height: 0;
-    transition: max-height 0.6s ease-out;
+.category-slider .item img {
+    height: 270px;
+    object-fit: cover;
 }
-.team-members-slider .team-item .social-icons a {
-    margin: 4px;
-    padding: 4px;
+.category-slider .item .img-wrapper {
+    width: 100%;
+    height: 270px;
+    border-radius: 12px;
+    overflow: hidden;
 }
-.team-members-slider .team-item:hover .social-icons {
-    max-height: 500px;
-    transition: max-height 0.6s ease-in;
+.category-slider .item:hover img {
+    transform: scale(1.2);
 }
-/* ============ about us page  end ============= */
+.activities-filter .dropdown-toggle {
+    background-color: #fff;
+    border: 2px solid #aaa;
+    color: #333;
+    padding: 0px 16px;
+    border-radius: 6px;
+}
+.activities-filter .dropdown-menu {
+    padding: 12px;
+    min-width: 200px;
+}
+.activities-filter .price-dropdown {
+    min-width: 340px;
+}
 
-/* ============ project page start ============= */
-.project-item {
+.imm-experience .img-wrapper .title {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    background-color: #00338d85;
+    color: #fff;
+    line-height: 32px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+/* ============ home page end ============= */
+
+/* ============ activity page start ============= */
+.activities-item {
     border-radius: 8px;
     background-color: #F5FAFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.project-item:hover {
+.activities-item:hover {
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 
 }
-.project-item .project-img img {
-    height: 300px;
+.activities-item .activities-img img {
+    height: 260px;
     object-fit: cover;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
-.project-item .project-detail {
-    padding: 20px 26px;
+.activities-item .activities-info {
+    padding: 12px 26px;
 }
-.project-item .project-detail p {
+.activities-item .title {
     color: #6084a4;
 }
-.project-item .project-features {
-    padding: 20px 26px;
+.activities-item .activities-info li {
+    font-weight: 500;
+    font-size: 14px;
 }
-.project-item .project-features .pf-item i {
-    font-size: 30px;
-}
-.project-item .project-location {
+.activities-item .activities-pricing {
     border-top: 1px solid #ccc;
-    padding: 10px 26px;
+    padding: 12px 26px;
 }
-.project-item .project-location .btn {
-    padding: 0px 24px;
+.activities-item .wishlist-icon {
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 18px;
 }
-/* ============ project page end ============= */
+/* ============ activity page end ============= */
 
-/* ============ project details page start ============= */
+/* ============ activity details page start ============= */
 .project-details-banner .overlay {
     top: 0;
     left: 0;
@@ -427,24 +277,12 @@ header .dropdown:hover .dropdown-menu {
 .gallery-area .item img {
     border-radius: 8px;
 }
-/* ============ project details page end ============= */
-
-/* ============ contact start ============= */
-.contact-details-area .form-control {
-    background-color: #F2F3F5;
-}
-.contact-info-box .ci-item .icon-box i {
-    font-size: 30px;
-}
-.contact-map-area {
-    background-color: #F5FAFF;
-}
-.contact-map-area iframe {
-    width: 100%;
-}
-/* ============ contact start ============= */
+/* ============ activity details page end ============= */
 
 /* ============ blog page start ============= */
+.page-banner-area .overlay {
+    background-color: #0000006b;
+}
 .blog-grid-area {
     background-color: #F5FAFF;
 }
@@ -507,6 +345,17 @@ header .dropdown:hover .dropdown-menu {
 
 /* ============ blog details page end ============= */
 
+/* ============ login page start ============= */
+.login-area .row {
+    min-height: 80vh;
+}
+.login-area .login-box {
+    border-radius: 12px;
+}
+.login-area input {
+    border-radius: 50px;
+}
+/* ============ login page end ============= */
 
 /* ============ footer start ============= */
 .footer-top-area {

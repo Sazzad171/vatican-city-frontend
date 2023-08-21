@@ -32,47 +32,12 @@
         line-height: 40px;
     }
     /* home page start */
-    .banner-area {
-        padding: 120px 0 80px;
-    }
-    .banner-area .wave-popup-btn {
-        padding-top: 80px;
-    }
-    .features-area,
-    .why-us-area,
-    .testimonial-area,
-    .count-users-area,
-    .featured-on-area {
-        padding: 30px 0 15px;
-    }
-    .features-area .section-heading,
-    .testimonial-area .section-heading {
-        margin-bottom: 40px;
-    }
-    .features-area .feature-box {
-        padding: 30px 30px;
-    }
-    .testimonial-single .img-area {
-        min-width: 30%;
-    }
-    .testimonial-single .triangle-bottom {
-        left: 40%;
-    }
+    
     .footer-top-area {
         padding: 40px 0;
     }
     .footer-middle-area {
         padding: 30px 15px;
-    }
-    /* about page start */
-    .page-banner-area {
-        padding: 130px 0 30px;
-    }
-    .our-story {
-        padding: 30px 0 15px;
-    }
-    .team-area {
-        padding: 30px 0;
     }
     /* project details page start */
     .project-details-banner {
