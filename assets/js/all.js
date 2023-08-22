@@ -11,9 +11,6 @@
         }
     });
 
-    // jquery calender
-    $( "#datepicker" ).datepicker();
-
     // featured slider
     $('.category-slider').owlCarousel({
         loop:true,
@@ -34,5 +31,29 @@
             }
         }
     });
+
+    // featured slider
+    $('.blog-slider').owlCarousel({
+        loop:true,
+        margin:20,
+        nav:false,
+        items:3,
+        dots:true,
+        center: true,
+        responsive: {
+            0: {
+                items:2,
+            },
+            600: {
+                items:2
+            },
+            1200: {
+                items:3
+            }
+        }
+    });
+
+    // jquery calender
+    $( "#datepicker" ).datepicker();
     
 })(jQuery);
