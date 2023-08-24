@@ -347,7 +347,26 @@ header .btn {
 /* ============ wishlist/cart end ============= */
 
 /* ============ checkout page start ============= */
-
+.checkout-area .form-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.checkout-area .confirm-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.checkout-area .confirm-box .products table {
+    vertical-align: middle;
+}
+.checkout-area .confirm-box .products img {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.checkout-area {
+    
+}
 /* ============ checkout page end ============= */
 
 /* ============ footer start ============= */
