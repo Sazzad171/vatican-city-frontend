@@ -322,6 +322,53 @@ header .btn {
 }
 /* ============ login page end ============= */
 
+/* ============ wishlist/cart start ============= */
+.wishlist-cart-table table {
+    vertical-align: middle;
+}
+.wishlist-cart-table table th,
+.wishlist-cart-table table td {
+    text-align: center;
+}
+.wishlist-cart-table .prod-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+.wishlist-cart-table .btn {
+    padding: 0 14px;
+}
+.wishlist-cart-table .btn.btn-danger {
+    background-color: #D22B2B;
+}
+.wishlist-cart-table .btn.btn-danger:hover {
+    background-color: #fff;
+}
+/* ============ wishlist/cart end ============= */
+
+/* ============ checkout page start ============= */
+.checkout-area .form-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.checkout-area .confirm-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.checkout-area .confirm-box .products table {
+    vertical-align: middle;
+}
+.checkout-area .confirm-box .products img {
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.checkout-area {
+    
+}
+/* ============ checkout page end ============= */
+
 /* ============ footer start ============= */
 .footer-top-area {
     background: url('../images/footer-pattern.png');
