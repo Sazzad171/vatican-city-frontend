@@ -226,11 +226,23 @@ header .btn {
 .actv-details-box .experience .block li {
     list-style: disc;
 }
-.actv-details-box {
-    
+.check-availability-box .select-area {
+    background-color: #0061DF;
+    border-radius: 16px;
 }
-.actv-details-box {
-    
+.check-availability-box .dropdown-toggle {
+    background-color: #fff;
+    border: 2px solid #aaa;
+    color: #333;
+    padding: 0px 16px;
+    border-radius: 6px;
+}
+.check-availability-box .dropdown-menu {
+    padding: 12px;
+    min-width: 200px;
+}
+.check-availability-box .ticket-details {
+    border-radius: 16px;
 }
 .book-ticket-box .price-text {
     line-height: 30px;
