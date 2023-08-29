@@ -215,6 +215,21 @@ header .btn {
 .ad-images .sm-img img {
     height: 140px;
 }
+.ad-heading-area .ad-images {
+    position: relative;
+}
+.ad-heading-area .ad-images .show-all-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    width: auto;
+    background: #fff;
+    border: 0;
+    color: #333;
+    border-radius: 6px;
+    padding: 0px 14px;
+}
 .actv-details-box,
 .book-ticket-box {
     border-radius: 10px;
@@ -230,6 +245,9 @@ header .btn {
     background-color: #0061DF;
     border-radius: 16px;
 }
+.check-availability-box:target {
+    scroll-margin-top: 100px;
+}
 .check-availability-box .dropdown-toggle {
     background-color: #fff;
     border: 2px solid #aaa;
@@ -240,6 +258,19 @@ header .btn {
 .check-availability-box .dropdown-menu {
     padding: 12px;
     min-width: 200px;
+}
+.check-availability-box .person-select .dropdown-menu {
+    min-width: 260px;
+}
+.check-availability-box .person-select .counter__increment,
+.check-availability-box .person-select .counter__decrement {
+    font-size: 20px;
+}
+.check-availability-box .person-select .counter__input {
+    width: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 .check-availability-box .ticket-details {
     border-radius: 16px;
@@ -376,10 +407,23 @@ header .btn {
     height: 60px;
     object-fit: cover;
 }
-.checkout-area {
+/* ============ checkout page end ============= */
+
+/* ============ my account start ============= */
+.my-account-area .nav-pills .nav-link:not(.active) {
+    background-color: #eee;
+    color: #333;
+}
+.my-account-area table {
+    vertical-align: middle;
+}
+.my-account-area .table .prod-img {
+    width: 60px;
+}
+.my-account-area {
     
 }
-/* ============ checkout page end ============= */
+/* ============ my account end ============= */
 
 /* ============ footer start ============= */
 .footer-top-area {

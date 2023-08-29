@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- jquery calender -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 </head>
 <body>
@@ -98,26 +100,43 @@
           <div class="row ad-images">
             <div class="col-md-8">
               <div class="big-img">
-                <img src="./assets/images//activities-details/1.jpg" alt="ac details" class="img-fluid">
+                <a href="./assets/images//activities-details/1.jpg" class="popup-gallery">
+                  <img src="./assets/images//activities-details/1.jpg" alt="ac details" class="img-fluid">
+                </a>
               </div>
             </div>
             <div class="col-md-4">
               <div class="mid-img mb-3">
-                <img src="./assets/images//activities-details/2.jpg" alt="ac details" class="img-fluid">
+                <a href="./assets/images/activities-details/2.jpg" class="popup-gallery">
+                  <img src="./assets/images/activities-details/2.jpg" alt="ac details" class="img-fluid">
+                </a>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="sm-img">
-                    <img src="./assets/images//activities-details/3.jpg" alt="ac details" class="img-fluid">
+                    <a href="./assets/images/activities-details/3.jpg" class="popup-gallery">
+                      <img src="./assets/images/activities-details/3.jpg" alt="ac details" class="img-fluid">
+                    </a>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="sm-img">
-                    <img src="./assets/images//activities-details/4.jpg" alt="ac details" class="img-fluid">
+                    <a href="./assets/images/activities-details/4.jpg" class="popup-gallery">
+                      <img src="./assets/images/activities-details/4.jpg" alt="ac details" class="img-fluid">
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
+            <button class="btn btn-light show-all-btn" id="open-gallery">Show All Images</button>
+          </div>
+          <div class="hidden-images d-none">
+            <a href="./assets/images/blogs/1.jpg" class="popup-gallery">
+              <img src="./assets/images/blogs/1.jpg" alt="ac details" class="img-fluid">
+            </a>
+            <a href="./assets/images/blogs/2.jpg" class="popup-gallery">
+              <img src="./assets/images/blogs/2.jpg" alt="ac details" class="img-fluid">
+            </a>
           </div>
         </div>
       </section>
@@ -173,29 +192,86 @@
                 <div class="check-availability-box mt-4 mt-lg-5 mb-4 mb-lg-5" id="availability">
                   <div class="select-area p-3 p-lg-4">
                     <h4 class="text-white mb-3">Select participants, date, and language</h4>
-                    <div class="d-flex flex-wrap gap-2">
-                      <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-                          Languages
-                        </button>
-                        <div class="dropdown-menu">
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lng" id="lng1">
-                            <label class="form-check-label" for="lng1">
-                              English
-                            </label>
+                    <div class="row">
+                      <div class="col-md-4 mb-3 mb-lg-0">
+                        <div class="dropdown person-select">
+                          <button class="btn rounded-pill dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            <i class="fas fa-user-friends me-2"></i> Persons
+                          </button>
+                          <div class="dropdown-menu">
+                            <div class="item row align-items-center">
+                              <div class="col-6">
+                                <h6 class="mb-0">Adult</h6>
+                                <p class="text-secondary">(Age 18-99)</p>
+                              </div>
+                              <div class="col-6">
+                                <div class="counter text-end">
+                                  <a class="counter__decrement text-blue font-700" href="#">&ndash;</a>
+                                  <input class="counter__input mx-2" type="text" value="1" name="counter" size="5" min="0" max="9" readonly="readonly"/>
+                                  <a class="counter__increment text-blue font-700" href="#">+</a>
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="my-2">
+                            <div class="item row align-items-center">
+                              <div class="col-6">
+                                <h6 class="mb-0">Children</h6>
+                                <p class="text-secondary">(Age 6-17)</p>
+                              </div>
+                              <div class="col-6">
+                                <div class="counter text-end">
+                                  <a class="counter__decrement text-blue font-700" href="#">&ndash;</a>
+                                  <input class="counter__input mx-2" type="text" value="1" name="counter" size="5" min="0" max="9" readonly="readonly"/>
+                                  <a class="counter__increment text-blue font-700" href="#">+</a>
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="my-2">
+                            <div class="item row align-items-center">
+                              <div class="col-6">
+                                <h6 class="mb-0">Infant</h6>
+                                <p class="text-secondary">(Age 5 and younger)</p>
+                              </div>
+                              <div class="col-6">
+                                <div class="counter text-end">
+                                  <a class="counter__decrement text-blue font-700" href="#">&ndash;</a>
+                                  <input class="counter__input mx-2" type="text" value="1" name="counter" size="5" min="0" max="9" readonly="readonly"/>
+                                  <a class="counter__increment text-blue font-700" href="#">+</a>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lng" id="lng2">
-                            <label class="form-check-label" for="lng2">
-                              Arabic
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lng" id="lng3">
-                            <label class="form-check-label" for="lng3">
-                              Chineese
-                            </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3 mb-lg-0">
+                        <div class="calender-box">
+                          <input type="text" name="" class="form-control rounded-pill text-center" id="datepicker" placeholder="pick a date">
+                        </div>
+                      </div>
+                      <div class="col-md-4 mb-3 mb-lg-0">
+                        <div class="dropdown">
+                          <button class="btn rounded-pill dropdown-toggle w-100" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Languages
+                          </button>
+                          <div class="dropdown-menu">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="lng" id="lng1">
+                              <label class="form-check-label" for="lng1">
+                                English
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="lng" id="lng2">
+                              <label class="form-check-label" for="lng2">
+                                Arabic
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="lng" id="lng3">
+                              <label class="form-check-label" for="lng3">
+                                Chineese
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -237,7 +313,12 @@
                       </div>
                     </div>
                     <hr>
-                    <div class="row justify-content-end">
+                    <div class="row align-items-center justify-content-end">
+                      <div class="col-md-6">
+                        <h6>
+                          <i class="far fa-calendar-alt me-2"></i> Cancel before 8:00 AM on August 30 for a full refund
+                        </h6>
+                      </div>
                       <div class="col-md-6">
                         <table class="table table-borderless">
                           <tr>
@@ -257,18 +338,20 @@
                       </div>
                     </div>
                     <hr>
-                    <div class="row align-items-center">
-                      <div class="col-md-6">
-                        <p class="text-secondary font-600">Total price</p>
-                        <h4 class="mb-0">US$ 32.50</h4>
-                        <p>
-                          <small class="text-secondary">All taxes and fees included</small>
-                        </p>
-                      </div>
-                      <div class="col-md-6">
-                        <p class="text-end">
-                          <button class="btn">Add to Cart</button>
-                        </p>
+                    <div class="bg-light p-3 rounded">
+                      <div class="row align-items-center">
+                        <div class="col-md-6">
+                          <p class="text-secondary font-600">Total price</p>
+                          <h4 class="mb-0">US$ 32.50</h4>
+                          <p>
+                            <small class="text-secondary">All taxes and fees included</small>
+                          </p>
+                        </div>
+                        <div class="col-md-6">
+                          <p class="text-end">
+                            <button class="btn">Add to Cart</button>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -471,6 +554,7 @@
     <script src="./assets/plugins/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/plugins/owl-carousel/owl.carousel.min.js"></script>
     <script src="./assets/plugins/magnific-popup/magnific-popup.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!-- counter up -->
     <script src="./assets/js/waypoints.js"></script>
     <script src="./assets/js/counterup.js"></script>

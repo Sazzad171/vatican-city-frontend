@@ -91,12 +91,14 @@
 
     <main>
         <!--==================== banner start ====================-->
-        <section class="page-banner-area pt-140 pb-40" style="background: url('./assets/images/home/banner.jpg'); background-position: center;
+        <section class="page-banner-area" style="background: url('./assets/images/home/banner.jpg'); background-position: center;
           background-repeat: no-repeat; background-size: cover;">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <h2 class="text-center text-uppercase text-white">My Account</h2>
+          <div class="overlay pt-160 pb-60">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <h2 class="text-center text-uppercase text-white">My account</h2>
+                </div>
               </div>
             </div>
           </div>
@@ -107,22 +109,178 @@
         <section class="my-account-area pt-40 pb-40">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4 mb-3 mb-lg-0">
+              <div class="col-lg-3 mb-3 mb-lg-0">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                  <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-selected="true">Dashboard</button>
-                  <button class="nav-link" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-selected="false">My Bookings</button>
-                  
+                  <button class="nav-link active mb-2" data-bs-toggle="pill" data-bs-target="#dashboard" type="button" role="tab" aria-selected="true">Dashboard</button>
+                  <button class="nav-link mb-2" data-bs-toggle="pill" data-bs-target="#myBookings" type="button" role="tab" aria-selected="false">My Bookings</button>
+                  <button class="nav-link mb-2" data-bs-toggle="pill" data-bs-target="#myInfos" type="button" role="tab" aria-selected="false">My Informations</button>
                 </div>
               </div>
-              <div class="col-lg-8">
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" tabindex="0">
-                    ...gdf
+              <div class="col-lg-9">
+                <div class="tab-content border shadow-sm p-3 rounded" id="v-pills-tabContent">
+                  <div class="tab-pane fade show active" id="dashboard" role="tabpanel" tabindex="0">
+                    <h4>Welcome, John Doe</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae nulla aspernatur cupiditate quisquam ab quibusdam fugit a numquam consectetur id neque quam ea dignissimos sapiente in non, exercitationem molestias. Architecto.
+                    </p>
+                    <a href="#" class="text-danger font-600">Signout from your account</a>
                   </div>
-                  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" tabindex="0">
-                    ...vxc
+                  <div class="tab-pane fade" id="myBookings" role="tabpanel" tabindex="0">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Image</th>
+                            <th>Package</th>
+                            <th>Duration</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <a href="#">
+                                <img src="./assets/images/home/cat-1.webp" alt="tour pack" class="prod-img img-fluid">
+                              </a>
+                            </td>
+                            <td>
+                              <a href="#" class="font-600">Rome: Vatican Museums & Sistine Chapel Skip-The-Line Tickets</a>
+                            </td>
+                            <td>2 Days</td>
+                            <td>US $220</td>
+                            <td>
+                              <span class="badge bg-success">Done</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="#">
+                                <img src="./assets/images/home/cat-2.webp" alt="tour pack" class="prod-img img-fluid">
+                              </a>
+                            </td>
+                            <td>
+                              <a href="#" class="font-600">Rome: Vatican Museums & Sistine Chapel Skip-The-Line Tickets</a>
+                            </td>
+                            <td>3 Days</td>
+                            <td>US $1220</td>
+                            <td>
+                              <span class="badge bg-success">Done</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="#">
+                                <img src="./assets/images/home/cat-1.webp" alt="tour pack" class="prod-img img-fluid">
+                              </a>
+                            </td>
+                            <td>
+                              <a href="#" class="font-600">Rome: Vatican Museums & Sistine Chapel Skip-The-Line Tickets</a>
+                            </td>
+                            <td>2 Days</td>
+                            <td>US $220</td>
+                            <td>
+                              <span class="badge bg-primary">Coming</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <a href="#">
+                                <img src="./assets/images/home/cat-2.webp" alt="tour pack" class="prod-img img-fluid">
+                              </a>
+                            </td>
+                            <td>
+                              <a href="#" class="font-600">Rome: Vatican Museums & Sistine Chapel Skip-The-Line Tickets</a>
+                            </td>
+                            <td>3 Days</td>
+                            <td>US $1220</td>
+                            <td>
+                              <span class="badge bg-danger">Rejected</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
-                  
+                  <div class="tab-pane fade" id="myInfos" role="tabpanel" tabindex="0">
+                    <h4 class="border-bottom pb-3 mb-3">Your Personal Informations</h4>
+                    <p>
+                      <span class="font-600">First Name:</span> John Doe
+                    </p>
+                    <p>
+                      <span class="font-600">Last Namet:</span> Mickel
+                    </p>
+                    <p>
+                      <span class="font-600">Email:</span> test@mail.com 
+                    </p>
+                    <p>
+                      <span class="font-600">Contact:</span> +8801653345353 
+                    </p>
+                    <p>
+                      <span class="font-600">Address:</span> Gulshan, Dhaka, Bangladesh
+                    </p>
+                    <!-- edit -->
+                    <p class="mt-3">
+                      <button class="btn btn-primary rounded py-0" type="button" data-bs-toggle="collapse" data-bs-target="#editInfo" aria-expanded="false" aria-controls="collapseExample">
+                        Edit your information
+                      </button>
+                    </p>
+                    <div class="collapse mt-3" id="editInfo">
+                      <div class="card card-body">
+                        <form action="">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="Your first name">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Your last name">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input type="email" class="form-control" placeholder="Your email address">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Phone number</label>
+                                <input type="text" class="form-control" placeholder="Your phone number">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Passport no.</label>
+                                <input type="text" class="form-control" placeholder="Your passport no.">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mb-3">
+                                <label class="form-label">Nationality</label>
+                                <select name="" id="" class="form-control">
+                                  <option value="">Select nationality</option>
+                                  <option value="">Bangladesh</option>
+                                  <option value="">Nepal</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-12">
+                              <div class="mb-3">
+                                <label class="form-label">Your Details Address</label>
+                                <textarea name="" id="" rows="5" class="form-control"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn py-0">Update</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
